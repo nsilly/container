@@ -1,5 +1,4 @@
 import Container from './Contracts/Container';
-import AppProviders from '../Configs/Providers';
 
 export class App {
   /**
@@ -39,12 +38,6 @@ export class App {
   static make(abstract, parameters = []) {
     const container = Container.getInstance();
     return container.make(abstract, parameters);
-  }
-
-  static resolveAppProviders() {
-    AppProviders.map(provider => {
-      new provider().register();
-    });
   }
 
   /**

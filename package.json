@@ -43,5 +43,8 @@
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^23.5.0",
     "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
   }
 }
