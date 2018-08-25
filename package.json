@@ -1,6 +1,6 @@
 {
-  "name": "@codersvn/container",
-  "version": "1.1.1",
+  "name": "@nsilly/container",
+  "version": "1.1.2",
   "description": "The IoC container for the system binding all of the various parts",
   "main": "dist/index.js",
   "scripts": {
