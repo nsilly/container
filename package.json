@@ -1,6 +1,6 @@
 {
   "name": "@codersvn/container",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The IoC container for the system binding all of the various parts",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codersvn/nf-container.git"
+    "url": "git+https://github.com/codersvn/container.git"
   },
   "keywords": [
     "Application",
@@ -19,9 +19,9 @@
   "author": "Hieupv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codersvn/nf-container/issues"
+    "url": "https://github.com/codersvn/container/issues"
   },
-  "homepage": "https://github.com/codersvn/nf-container#readme",
+  "homepage": "https://github.com/codersvn/container#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
