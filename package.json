@@ -1,6 +1,6 @@
 {
   "name": "@nsilly/container",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "The IoC container for the system binding all of the various parts",
   "main": "dist/index.js",
   "scripts": {
