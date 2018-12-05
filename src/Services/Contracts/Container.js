@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { Exception } from '../../Exceptions/Exception';
+import { Exception } from '@nsilly/exceptions';
 
 export default class Container {
   constructor() {
