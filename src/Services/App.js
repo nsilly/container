@@ -29,6 +29,19 @@ export class App {
   }
 
   /**
+   * Register a container with value
+   *
+   * @param string|class abstract
+   * @param any
+   *
+   * @return void
+   */
+  static useValue(abstract, concrete) {
+    const container = Container.getInstance();
+    container.useValue(abstract, concrete);
+  }
+
+  /**
    * Resolve the given type from the container.
    *
    * @param string|class abstract

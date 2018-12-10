@@ -17,11 +17,27 @@ export default class Container {
    */
   bind(abstract, concrete, isSingleton = false) {
     const resolved_abstract = this.resolveAbstract(abstract);
-    let f = this.bindings.find((item, key) => key === resolved_abstract);
+    const f = this.bindings.find((item, key) => key === resolved_abstract);
     if (f !== undefined) {
       throw new Exception('can not bind instance', 1001);
     }
     this.bindings[resolved_abstract] = { abstract, concrete, isSingleton };
+  }
+  /**
+   * Register a binding with value.
+   *
+   * @param string|class abstract
+   * @param any
+   *
+   * @return void
+   */
+  useValue(abstract, value) {
+    const resolved_abstract = this.resolveAbstract(abstract);
+    const f = this.bindings.find((item, key) => key === resolved_abstract);
+    if (f !== undefined) {
+      throw new Exception('can not bind instance', 1001);
+    }
+    this.bindings[resolved_abstract] = { abstract, value, useValue: true };
   }
   /**
    * Resolve the given type from the container.
@@ -31,7 +47,7 @@ export default class Container {
    * @return mixed
    */
   make(abstract, parameters = []) {
-    let resolved_abstract = this.resolveAbstract(abstract);
+    const resolved_abstract = this.resolveAbstract(abstract);
     this.parameters = parameters;
     if (this.bindings === undefined) {
       this.bindings = [];
@@ -43,7 +59,9 @@ export default class Container {
         return new abstract();
       }
     } else {
-      if (this.bindings[resolved_abstract]['isSingleton'] === true) {
+      if (this.bindings[resolved_abstract]['useValue'] === true) {
+        return this.bindings[resolved_abstract]['value'];
+      } else if (this.bindings[resolved_abstract]['isSingleton'] === true) {
         if (this.bindings[resolved_abstract]['instance'] === undefined) {
           this.bindings[resolved_abstract]['instance'] = new this.bindings[resolved_abstract]['concrete']();
         }

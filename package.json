@@ -1,6 +1,6 @@
 {
   "name": "@nsilly/container",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "The IoC container for the system binding all of the various parts",
   "main": "dist/index.js",
   "scripts": {
@@ -29,16 +29,17 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
+    "babel-eslint": "^10.0.1",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
-    "jest": "test",
-    "rimraf": "^2.6.2",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "test",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "@nsilly/exceptions": "*"
